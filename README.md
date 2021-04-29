@@ -52,5 +52,11 @@ Adapt/adopt/extend the `yml` files from one of your workflow folders.
 
 Implement one failing test and at least one passing test:
 
-- _enter the name of a **passing** test
-- _enter the name of a **failing** test
+- This time I have slightly changed and set the maximum CCN to be 5 just for a controlled run enviroment and also my logic can run felxibly. For other checks I haven't changed anything in, I considered them a fair check and did copy paste only.
+- Smallest possible **failing** test is to test that the input should not be passed as empty -test_to_check_input_is_empty
+- Smallest possible function for **Passing test** - get_current_range_frequency
+- Another **failing** test is to test if input has any Nan or None - test_to_check_output_yields_invalid_if_input_has_nan, test_to_check_output_yields_invalid_if_input_has_None
+- Smallest possible function for **Passing test** is to check for nan and None values before any reading or transformations - get_current_range_frequency
+- Another **failing** test is to test if input has any non integer data ( in my example i have taken string data ) - test_to_check_impact_if_cuurent_values_are_passed_as_string
+- Smallest possible code for **Passing test** is to add one statement check before producing results- 
+if not all(isinstance(x, int) for x in data) - this particular line can check any mismatch of datatype in elements
